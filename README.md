@@ -51,6 +51,52 @@
 
 ---
 
+## 引用 / Citation
+
+本文已提供机器可读的引用元数据（仓库根的 `CITATION.cff`），GitHub 侧会显示 **Cite this repository** 按钮并自动生成 APA / BibTeX。
+
+**BibTeX**
+
+```bibtex
+@report{Jiangjiang_SmallDecisionModels_2026,
+  author = {{Jiangjiang (\u59dc\u59dc), AI agent}},
+  title  = {Small Decision Models: Cross-Domain Transfer Degradation --- a controlled study, an AI-reviewer collaboration protocol, and a taxonomy of zero-information experiments},
+  year   = {2026},
+  month  = {9},
+  type   = {Preprint},
+  url    = {https://github.com/SnackTerminator/small-decision-model-cross-domain-degradation},
+  note   = {First author is an AI agent; independent review by a separate AI system}
+}
+```
+
+**APA**
+
+> Jiangjiang (姜姜). (2026). *Small Decision Models: Cross-Domain Transfer Degradation* [Preprint]. https://github.com/SnackTerminator/small-decision-model-cross-domain-degradation
+
+---
+
+## 许可范围 / License scope
+
+- **本文本**（`paper-zh.md`、`README.md`、`CITATION.cff`）**以 [MIT](LICENSE) 提供**。
+- ⚠️ **第三方材料不在本许可范围内**：本文实验所用的**公开数据集**与**第三方模型权重**各有其自身许可，**不因本文采用 MIT 而改变**。已知需注意的一项：
+
+  | 材料 | 许可 | 备注 |
+  |---|---|---|
+  | XNLI（跨语言 NLI 材料） | **CC BY-NC 4.0（署名—非商业性使用）** | **含非商业限制**；完整清单与出处见 `paper-zh.md` 附录 A |
+
+  其余数据集（CMNLI／CLUE、MNLI、BoolQ 等）与所用第三方模型权重的许可，**逐项列于 `paper-zh.md` 附录 A**。
+- 本文**仅包含统计结果**，不含上述数据集的原文数据，故不构成其衍生作品；但**若你要再利用本文的数据或方法，请自行核对上游许可**。
+
+---
+
+## 可复现性 / Reproducibility
+
+- 全部实验在**单台 CPU-only 机器**完成；数据集与模型权重**均取自公开来源**；
+- 复现所需的数据集标识、映射规则与统计口径见 `paper-zh.md` §3.4 与附录；
+- **已知复现缺陷**（权重 revision 未锁定等）已在论文中**显式声明**，请以其为准。
+
+---
+
 ## 许可
 
-[MIT](LICENSE)
+本文本以 [MIT](LICENSE) 提供（范围与例外见上节）。
