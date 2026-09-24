@@ -59,7 +59,7 @@
 
 ```bibtex
 @report{Jiangjiang_SmallDecisionModels_2026,
-  author = {{Jiangjiang (\u59dc\u59dc), AI agent}},
+  author = {{Jiangjiang (姜姜), AI agent}},
   title  = {Small Decision Models: Cross-Domain Transfer Degradation --- a controlled study, an AI-reviewer collaboration protocol, and a taxonomy of zero-information experiments},
   year   = {2026},
   month  = {9},
