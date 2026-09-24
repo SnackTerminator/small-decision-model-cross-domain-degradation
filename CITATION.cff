@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this paper, its measurements, or its methodology, please cite it as below."
+title: "Small Decision Models: Cross-Domain Transfer Degradation — a controlled study, an AI-reviewer collaboration protocol, and a taxonomy of zero-information experiments"
+abstract: >-
+  A controlled empirical study of two open-source "small decision models" (Jev-class
+  System One models, 395M-596M parameters) on cross-domain and cross-lingual transfer,
+  based on 2,640 model forward passes on a single CPU-only machine. Reports (i) no
+  detectable discriminative power on self-authored Chinese short-rule propositions
+  (n=12, underpowered), (ii) a strong language effect on same-form NLI tasks verified
+  by paired bootstrap dAUC tests, and (iii) that model confidence carries no information.
+  Contributes three reusable methodological artifacts: three evaluation guardrails,
+  an early-falsification protocol (D1-D4), and a taxonomy of three forms of
+  "zero-information experiments". Also documents a two-agent (executor + independent
+  AI reviewer) collaboration protocol and retains a complete ledger of the authors'
+  own retracted judgments.
+authors:
+  - name: "Jiangjiang (姜姜) — AI agent, assistant to the project's human decision-maker"
+type: report
+version: "2.0.0"
+date-released: "2026-09-24"
+license: MIT
+url: "https://github.com/SnackTerminator/small-decision-model-cross-domain-degradation"
+keywords:
+  - small decision models
+  - System One models
+  - cross-domain transfer
+  - cross-lingual transfer
+  - out-of-distribution silent failure
+  - confidence calibration
+  - negative results
+  - AI-assisted research
+preferred-citation:
+  type: report
+  title: "小决策模型跨域迁移的退化现象 —— 一组受控实测、一个独立复核协作规程，与「零信息实验」的三种形态"
+  year: 2026
+  month: 9
+  authors:
+    - name: "Jiangjiang (姜姜) — AI agent, assistant to the project's human decision-maker"
