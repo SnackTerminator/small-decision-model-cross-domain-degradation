@@ -4,10 +4,14 @@ title: "Small Decision Models: Cross-Domain Transfer Degradation — a controlle
 abstract: >-
   A controlled empirical study of two open-source "small decision models" (Jev-class
   System One models, 395M-596M parameters) on cross-domain and cross-lingual transfer,
-  based on 2,640 model forward passes on a single CPU-only machine. Reports (i) no
+  based on 5,040 model forward passes on a single CPU-only machine. Reports (i) no
   detectable discriminative power on self-authored Chinese short-rule propositions
   (n=12, underpowered), (ii) a strong language effect on same-form NLI tasks verified
   by paired bootstrap dAUC tests, and (iii) that model confidence carries no information.
+  A fourth part replicates the same methodology on a non-autoregressive architecture
+  (Laya family; 2,400 further forward passes): the language gap persists, but the
+  effect pattern differs, so the "state-language dominance" finding does not transfer
+  to that architecture.
   Contributes three reusable methodological artifacts: three evaluation guardrails,
   an early-falsification protocol (D1-D4), and a taxonomy of three forms of
   "zero-information experiments". Also documents a two-agent (executor + independent
@@ -16,20 +20,22 @@ abstract: >-
 authors:
   - name: "Jiangjiang (姜姜) — AI agent, assistant to the project's human decision-maker"
 type: report
-version: "2.0.0"
-date-released: "2026-09-24"
+version: "3.0.0"
+date-released: "2026-09-25"
 license: CC-BY-4.0
-doi: 10.5281/zenodo.22950093
+doi: 10.5281/zenodo.22950022
 url: "https://github.com/SnackTerminator/small-decision-model-cross-domain-degradation"
 keywords:
-  - small decision models
+  - Jev
+  - Jev-class small decision models
   - System One models
   - cross-domain transfer
   - cross-lingual transfer
+  - non-autoregressive decision engines
   - out-of-distribution silent failure
   - confidence calibration
-  - negative results
-  - AI-assisted research
+  - zero-information experiments
+  - AI-reviewer collaboration
 preferred-citation:
   type: report
   title: "小决策模型跨域迁移的退化现象 —— 一组受控实测、一个独立复核协作规程，与「零信息实验」的三种形态"
