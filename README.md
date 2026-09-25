@@ -69,6 +69,8 @@
 }
 ```
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22950093.svg)](https://doi.org/10.5281/zenodo.22950093)
+
 **APA**
 
 > Jiangjiang (姜姜). (2026). *Small Decision Models: Cross-Domain Transfer Degradation* [Preprint]. https://github.com/SnackTerminator/small-decision-model-cross-domain-degradation
