@@ -5,19 +5,20 @@
 > **English** ｜ [中文版 (Chinese)](README.md) ｜ Full paper (Chinese): [`paper-zh.md`](paper-zh.md)
 
 **Author**: Jiangjiang (姜姜) — AI agent, assistant to the project's human decision-maker
-**Date**: 2026-09-24 ｜ **Version**: v2 (public release)
+**Date**: 2026-09-25 ｜ **Version**: v3 (public release)
 
 ---
 
 ## Abstract
 
-This paper reports a controlled empirical evaluation of two open-source "small decision models" (*Jev*-class System One models, 395 M–596 M parameters) for usability in cross-domain and cross-lingual settings: **2,640 model forward passes**, all performed on a single CPU-only machine, covering 2 models × 4 language/format combinations × 6 datasets.
+This paper reports a controlled empirical evaluation of two open-source "small decision models" (*Jev*-class System One models, 395 M–596 M parameters) for usability in cross-domain and cross-lingual settings: **5,040 model forward passes** (2,640 in v2 + 2,400 in the new v3 §4.13), all performed on a single CPU-only machine, covering **3 model families** × 4 language/format combinations × 6 datasets (5 public sets + 1 self-authored proposition set).
 
-Three main findings:
+Four main findings:
 
 1. **No detectable discriminative power on self-authored Chinese short-rule propositions** (AUC ≈ 0.5, n = 12; underpowered — reported as an exploratory observation only);
 2. **A strong language effect on same-form natural language inference (NLI) tasks** — using an officially item-parallel bilingual NLI dataset with a *state*-language × *criteria*-language 2×2 crossover and item-paired bootstrap ΔAUC tests: the *state* language effect is **+0.3150** under Chinese criteria and **+0.1660** under English criteria (both 95% CIs exclude 0); the *criteria* language effect is significant only under Chinese state (**+0.1654**); the interaction DiD = **−0.1487** (95% CI [−0.2086, −0.0916]);
-3. **Model confidence carries no information** — output probability distributions are narrow, positive and negative ranges overlap heavily, and predicted labels are one-sided; citing the confidence of such models therefore requires calibration evidence to be given alongside.
+3. **Model confidence carries no information** — output probability distributions are narrow, positive and negative ranges overlap heavily, and predicted labels are one-sided; citing the confidence of such models therefore requires calibration evidence to be given alongside;
+4. **Cross-architecture replication (new in v3)** — the same methodology applied to a **non-autoregressive architecture** (Laya family; 2 checkpoints + 1 same-source weight control, 2,400 forward passes in total) keeps the language gap (English AUC 0.984 vs Chinese 0.568) but shows a **different effect pattern**: the *state* language effect is **not significant** under Chinese criteria (+0.0398, 95% CI includes 0) ⇒ the "state-dominant" pattern of §4.9 **does not transfer** to that architecture (cross-model comparison; architecture and model differences not separated; no formal cross-model difference test — a descriptive judgment).
 
 Methodologically, the paper proposes and empirically validates three reusable artifacts: **(a) three evaluation guardrails**; **(b) an early-falsification protocol D1–D4** (a gated stage of 60 forward passes in place of full-depth evaluation); **(c) three forms of "zero-information experiments"** (degradation-must-appear / identity-like / threshold-like) together with a corresponding three-question self-check.
 
@@ -39,7 +40,7 @@ Methodologically, the paper proposes and empirically validates three reusable ar
 - **A general-purpose large language model system from a different vendor acted as the independent reviewer** — receiving only the text and data supplied by the executor, giving opinions independently, without access to the original files. **That reviewer is an AI system, not a human expert**; it is nowhere described in this paper as an "independent expert ruling";
 - **One human decision-maker** took part in direction-setting and authorization, and **did not take part** in data collection, statistical analysis or writing.
 
-**Evidence of collaboration effectiveness**: **0** reviewer comments were judged "not valid", yet they prompted the executor to **self-correct 4 judgments and retract 12 conclusions**. The paper retains the authors' own **complete error ledger** (Appendix C).
+**Evidence of collaboration effectiveness**: at the v2 checkpoint, **0** reviewer comments were judged "not valid", yet they prompted the executor to **self-correct 4 judgments and retract 12 conclusions**; **during v3 a further independent review round** led to **2 more corrections** (one circular argument, one over-interpretation) and **1 false suspicion ruled out**. The paper retains the authors' own **complete error ledger** (Appendix C).
 
 ---
 
@@ -71,7 +72,7 @@ Machine-readable citation metadata is provided (repository-root [`CITATION.cff`]
 }
 ```
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22950093.svg)](https://doi.org/10.5281/zenodo.22950093)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22950022.svg)](https://doi.org/10.5281/zenodo.22950022)
 
 **APA**
 
