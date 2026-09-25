@@ -1,5 +1,7 @@
 # Small Decision Models: Cross-Domain Transfer Degradation
 
+> **中文** ｜ [English version](README.en.md)
+
 **A controlled empirical study · an AI-reviewer collaboration protocol · a taxonomy of "zero-information experiments"**
 
 **中文标题**：小决策模型跨域迁移的退化现象 —— 一组受控实测、一个独立复核协作规程，与「零信息实验」的三种形态
